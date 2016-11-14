@@ -4,4 +4,4 @@
 
 Simple app to list and copy uuids to clipboad 
 
-# [demo|usage](marcosflorencio.github.io/pop-uuid4)
+# [demo|usage](https://marcosflorencio.js.org/pop-uuid4/)
