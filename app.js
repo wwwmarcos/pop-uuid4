@@ -46,7 +46,7 @@ function deleteOldTable() {
   element('#tableContainer').innerHTML = '&nbsp;'
 }
 
-function requestUiidData(callBack, quantity) {
+function requestUUID4Data(callBack, quantity) {
 
   var request = new XMLHttpRequest()
   var url = 'https://cors-anywhere.herokuapp.com/www.uuidgenerator.net/api/version4/' + quantity
@@ -103,12 +103,14 @@ function element(selector) {
   return document.querySelector(selector)
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
+
+
+document.addEventListener("DOMContentLoaded", function onLoad (event) {
 
   element('#pop').addEventListener('click', function () {
     enableInput('#copyOne')
     deleteOldTable()
-    requestUiidData(createTable, getQuantity())
+    requestUUID4Data(createTable, getQuantity())
   })
 
   element('#copyOne').addEventListener('click', function () {
@@ -126,6 +128,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       disableInput('#copyOne')
     }
   })
+
+   requestUUID4Data(createTable, 10)
 
 })
 
